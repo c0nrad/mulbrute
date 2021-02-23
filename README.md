@@ -1,6 +1,6 @@
 # Creating Multiplication Circuits via Brute Force
 
-A project for the XanaduAI QHack2021 hackathon. [https://github.com/XanaduAI/QHack/issues/11](Submission)
+A project for the XanaduAI QHack2021 hackathon. [Submission](https://github.com/XanaduAI/QHack/issues/11)
 
 ## Overview
 
