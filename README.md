@@ -10,7 +10,7 @@ The goal of this project is to see if we can make the circuit for "A=A\*B" small
 
 ## Demo
 
-![demo](/mulbrute._1bitgif)
+![demo](/mulbrute_1bit.gif)
 
 ## Results (1bit multiply)
 
