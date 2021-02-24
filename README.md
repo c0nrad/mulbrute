@@ -8,13 +8,15 @@ This program brute forces through a large combination of quantum circuits in ord
 
 ## Background
 
-It's hard to do multiplication with Quantum Circuits. Current multiplication circuits require a large number of qubits which we don't have.
+It's hard to do multiplication with Quantum Circuits. Current multiplication circuits require a large number of ancilla qubits which we don't have.
 
 The goal of this project is to see if we can make the circuit for "A=A\*B" smaller.
 
 We'll do this by brute forcing over every possible circuit using only PauliX, CNOT, and Toffoli gates, starting from the simplest circuits and getting incrementally harder.
 
 Under the hood it uses python's itertools.permutations library to generate circuits and then pennylane's quantum simulator to test the circuits.
+
+The terminal user interface was written in [blessed](https://blessed.readthedocs.io/en/latest/index.html) and inspired heavily by [afl](https://lcamtuf.coredump.cx/afl/).
 
 ## Demo
 
