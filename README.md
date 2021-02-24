@@ -1,4 +1,4 @@
-# Creating Multiplication Circuits via Brute Force
+# Determining Efficient Multiplication Circuits via Brute Force
 
 A project for the XanaduAI QHack2021 hackathon. [Submission](https://github.com/XanaduAI/QHack/issues/11)
 
@@ -13,6 +13,8 @@ It's hard to do multiplication with Quantum Circuits. Current multiplication cir
 The goal of this project is to see if we can make the circuit for "A=A\*B" smaller.
 
 We'll do this by brute forcing over every possible circuit using only PauliX, CNOT, and Toffoli gates, starting from the simplest circuits and getting incrementally harder.
+
+Under the hood it uses python's itertools.permutations library to generate circuits and then pennylane's quantum simulator to test the circuits.
 
 ## Demo
 
