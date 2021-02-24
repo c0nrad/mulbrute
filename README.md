@@ -8,11 +8,15 @@ It's hard to do multiplication with Quantum Circuits. Current multiplication cir
 
 The goal of this project is to see if we can make the circuit for "A=A\*B" smaller.
 
+We'll do this by brute forcing over every possible circuit using only PauliX, CNOT, and Toffoli gates, starting from the simplest circuits and getting incrementally harder.
+
 ## Demo
 
 ![demo](/mulbrute_1bit.gif)
 
 ## Results (1bit multiply)
+
+So far it's been able to determine two circuits for 1 bit multiplication!
 
 If we allow the first register to be clobbered:
 
