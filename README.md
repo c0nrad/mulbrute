@@ -22,7 +22,9 @@ The terminal user interface was written in [blessed](https://blessed.readthedocs
 
 ![demo](/mulbrute_1bit.gif)
 
-## Results (1bit multiply)
+### Results
+
+#### 1 bit multiply
 
 So far it's been able to determine two circuits for 1 bit multiplication!
 
@@ -33,6 +35,13 @@ If we allow the first register to be clobbered:
 If we don't want the first register to be clobbered:
 
 ![1_noclobber](1_noclobber.png)
+
+#### 2 bit multiply
+
+Haven't determined this circuit yet.
+
+Progress:
+![2_attempt](2_attempt.png)
 
 # Method
 

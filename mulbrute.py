@@ -6,7 +6,7 @@ import os
 from blessed import Terminal
 
 
-VALIDATE_A_REG = True
+VALIDATE_A_REG = False
 
 
 class SolutionTable():
@@ -237,7 +237,7 @@ class Display():
 
     def update(self):
 
-        # print(self.term.home + self.term.clear)
+        print(self.term.home + self.term.clear)
         print(self.term.move(0, 45) + self.term.mediumpurple +
               "mulbrute v0.1" + self.term.normal)
 
@@ -376,7 +376,7 @@ if __name__ == "__main__":
     assert solutions.get(1, 2) == "10"
     assert solutions.get(3, 1, pad=5) == "00011"
 
-    register_size = 1
+    register_size = 2
     ancilla_size = 1
 
     b = BruteForcer(register_size, ancilla_size)
@@ -385,7 +385,7 @@ if __name__ == "__main__":
 
         b.run()
 
-        if b.shots % 10 == 1:
+        if b.shots % 1000 == 1:
             d.update()
     d.update()
     print("All Done")
