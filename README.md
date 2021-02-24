@@ -36,7 +36,7 @@ If we don't want the first register to be clobbered:
 
 # Method
 
-Brute force. Basically the algorithm tries every possible combination of CNOT gates and checks to see if the results are correct.
+Brute force. Basically the algorithm tries every possible combination of PauliX/CNOT/Toffoli gates and checks to see if the results are correct.
 
 For example this gate was randomly created. A = [0,1], B=[2,3,4,5]
 
