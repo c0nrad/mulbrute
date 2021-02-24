@@ -4,6 +4,10 @@ A project for the XanaduAI QHack2021 hackathon. [Submission](https://github.com/
 
 ## Overview
 
+This program brute forces through a large combination of quantum circuits in order to find an efficient multiplication circuit for arbitrary qubit register size.
+
+## Background
+
 It's hard to do multiplication with Quantum Circuits. Current multiplication circuits require a large number of qubits which we don't have.
 
 The goal of this project is to see if we can make the circuit for "A=A\*B" smaller.
