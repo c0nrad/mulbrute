@@ -8,9 +8,19 @@ It's hard to do multiplication with Quantum Circuits. Current multiplication cir
 
 The goal of this project is to see if we can make the circuit for "A=A\*B" smaller.
 
-Demo so far:
+## Demo
 
-![alt](/mulbrute.gif)
+![demo](/mulbrute._1bitgif)
+
+## Results (1bit multiply)
+
+If we allow the first register to be clobbered:
+
+![1_clobber](/1_clobber.png)
+
+If we don't want the first register to be clobbered:
+
+![1_noclobber](1_noclobber.png)
 
 # Method
 
@@ -30,3 +40,10 @@ For example this gate was randomly created. A = [0,1], B=[2,3,4,5]
 Then I measure a couple of times to see if corresponds to the multiplication table. So I plug in A=01, and B = 10, and then check after the circuit executes if B = 0010.
 
 It uses pennylanes default qubit simulator to check the circuits.
+
+# Running
+
+```
+pip3 install blessed pennylane
+make run
+```
