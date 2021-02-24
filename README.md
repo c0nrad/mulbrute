@@ -45,6 +45,28 @@ Then I measure a couple of times to see if corresponds to the multiplication tab
 
 It uses pennylanes default qubit simulator to check the circuits.
 
+## Pennylane circuit
+
+```python
+def circuit(self, a, b):
+    aBasis = i_to_basis(a, pad=self.reg_a_size)
+    bBasis = i_to_basis(b, pad=self.reg_a_size)
+    zeros = [0] * (self.reg_b_size - self.reg_a_size)
+    ancilla = [0] * (self.ancilla_size)
+    qml.BasisState(np.array(aBasis + zeros + bBasis + ancilla), wires=range(
+        self.reg_a_size + self.reg_b_size + self.ancilla_size))
+
+    for g in self.gateSet:
+        if len(g) == 1:
+            qml.PauliX(g[0])
+        if len(g) == 2:
+            qml.CNOT(wires=list(g))
+        if len(g) == 3:
+            qml.Toffoli(wires=list(g))
+
+    return [qml.expval(qml.PauliZ(i)) for i in range(self.reg_a_size + self.reg_b_size)]
+```
+
 # Running
 
 ```
